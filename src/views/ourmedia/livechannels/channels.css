@@ -1,0 +1,14 @@
+.list-p{
+    width: 85%;
+    display: -webkit-inline-box;
+}
+.input-ab{
+    width: 34%;
+    display: -webkit-inline-box;
+    right: 10px;
+    top: 6px;
+    position: absolute;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
