@@ -6,21 +6,11 @@ export default {
             icon: 'icon-speedometer',
             badge: {
                 variant: 'info',
-
             },
         },
-        // {
-        //   title: true,
-        //   name: 'Theme',
-        //   wrapper: {
-        //     element: '',
-        //     attributes: {}
-        //   },
-        //   class: ''             // optional class names space delimited list for title item ex: "text-center"
-        // },
         {
             name: 'Live Channels',
-            url: '/',
+            url: '/liveChannels',
             icon: 'icon-live',
             children: [
                 {
@@ -38,8 +28,9 @@ export default {
         },
         {
             name: 'Dramas',
-            url: '/',
+            url: '/dramas',
             icon: 'icon-live',
+            defaultOpen: false,
             children: [
                 {
                     name: 'All Dramas',
@@ -55,8 +46,9 @@ export default {
         },
         {
             name: 'Movies',
-            url: '/',
+            url: '/movies',
             icon: 'icon-live',
+            defaultOpen: false,
             children: [
                 {
                     name: 'All Movies',
