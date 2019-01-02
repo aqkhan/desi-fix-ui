@@ -24,9 +24,61 @@ import {
     Label,
     Row,
 } from 'reactstrap';
+import { WithContext as ReactTags } from 'react-tag-input';
+import './channels.css';
+
+const KeyCodes = {
+    comma: 188,
+    enter: 13,
+};
+
+const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
 
 class addChannel extends React.Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            tags: [
+
+
+            ],
+            suggestions: [
+                { id: 'start sports', text: 'Star Sports' },
+                { id: 'sama', text: 'SamaTv' },
+                { id: 'new ', text: 'NEWTV' },
+                { id: 'Costa Ricatv', text: 'Costa Ricatv' },
+                { id: 'Sri Lankatv', text: 'Sri Lanka tv' },
+                { id: 'Thailandtv', text: 'Thailandtv' }
+            ]
+        };
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleAddition = this.handleAddition.bind(this);
+        this.handleDrag = this.handleDrag.bind(this);
+    }
+
+    handleDelete(i) {
+        const { tags } = this.state;
+        this.setState({
+            tags: tags.filter((tag, index) => index !== i),
+        });
+    }
+
+    handleAddition(tag) {
+        this.setState(state => ({ tags: [...state.tags, tag] }));
+    }
+
+    handleDrag(tag, currPos, newPos) {
+        const tags = [...this.state.tags];
+        const newTags = tags.slice();
+
+        newTags.splice(currPos, 1);
+        newTags.splice(newPos, 0, tag);
+
+        // re-render
+        this.setState({ tags: newTags });
+    }
     render(){
         return(
             <div className="animated fadeIn">
@@ -66,10 +118,35 @@ class addChannel extends React.Component{
                                     <Col xs="12">
                                         <FormGroup>
                                             <Label htmlFor="">Channel Tags</Label>
-                                            <Input  id="" placeholder="Channel Tags" required />
+                                            <div>
+                                                <ReactTags tags={this.state.tags}
+                                                           suggestions={this.state.suggestions}
+                                                           handleDelete={this.handleDelete}
+                                                           handleAddition={this.handleAddition}
+                                                           handleDrag={this.handleDrag}
+                                                           delimiters={delimiters}
+                                                           classNames={{
+                                                               tags: 'ReactTags__tags',
+                                                               tagInput: 'ReactTags__tagInput',
+                                                               tagInputField: 'ReactTags__tagInputField',
+                                                               selected: 'ReactTags__selected',
+                                                               tag: 'ReactTags__tag',
+                                                               remove: 'ReactTags__remove',
+                                                               suggestions: 'ReactTags__suggestions',
+                                                               activeSuggestion: 'ReactTags__activeSuggestion'
+                                                           }}/>
+                                            </div>
                                         </FormGroup>
                                     </Col>
                                 </Row>
+                                <Row>
+                                    <Col xs="2">
+                                        <FormGroup>
+                                            <Input  id="" type="button" className="btn btn-primary mt-3" value="Submit" />
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+
 
                             </CardBody>
                         </Card>

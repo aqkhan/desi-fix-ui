@@ -70,6 +70,13 @@ class addDrama extends React.Component{
                                         </FormGroup>
                                     </Col>
                                 </Row>
+                                 <Row>
+                                    <Col xs="2">
+                                        <FormGroup>
+                                            <Input  id="" type="button" className="btn btn-primary mt-3" value="Submit" />
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
 
                             </CardBody>
                         </Card>

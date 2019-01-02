@@ -22,10 +22,11 @@ class DefaultHeader extends Component {
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
-        <AppNavbarBrand
-          full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
-        />
+        {/*<AppNavbarBrand*/}
+          {/*full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}*/}
+          {/*minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}*/}
+        {/*/>*/}
+            <h2 className="ml-5 mr-5">DESI FIX</h2>
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         <Nav className="d-md-down-none" navbar>
@@ -34,12 +35,19 @@ class DefaultHeader extends Component {
           </NavItem>
         </Nav>
         <Nav className="ml-auto" navbar>
-          <NavItem className="d-md-down-none">
-            <NavLink href="#"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
-          </NavItem>
 
 
           <AppHeaderDropdown direction="down">
+            <DropdownToggle nav>
+                <i className="icon-bell"></i>
+            </DropdownToggle>
+            <DropdownMenu right style={{ right: 'auto' }}>
+              <DropdownItem header tag="div" className="text-center"><strong>Notifications</strong></DropdownItem>
+
+              <DropdownItem><p>You have a new drama in the list</p></DropdownItem>
+            </DropdownMenu>
+          </AppHeaderDropdown>
+             <AppHeaderDropdown direction="down">
             <DropdownToggle nav>
               <img src={'../../assets/img/avatars/6.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
             </DropdownToggle>

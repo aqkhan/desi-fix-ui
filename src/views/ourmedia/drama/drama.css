@@ -12,3 +12,6 @@
 .cursor-pointer{
     cursor: pointer;
 }
+.table th{
+    border-top: 0px solid transparent;
+}

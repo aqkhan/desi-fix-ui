@@ -21,10 +21,10 @@
           }
         ],
         "Tags": [
-          "fugiat",
-          "voluptate",
-          "aute",
-          "enim"
+          {"id":"1","text":"fugiat"},
+          {"id":"2","text":"fugiat1"},
+          {"id":"3","text":"fugiat2"},
+          {"id":"4","text":"fugiat3"}
         ]
       }
     },
@@ -49,10 +49,10 @@
           }
         ],
         "Tags": [
-          "irure",
-          "enim",
-          "culpa",
-          "sunt"
+          {"id":"1","text":"irure"},
+          {"id":"2","text":"enim"},
+          {"id":"3","text":"culpa"},
+          {"id":"4","text":"sunt"}
         ]
       }
     },
@@ -77,10 +77,10 @@
           }
         ],
         "Tags": [
-          "nostrud",
-          "aliquip",
-          "ullamco",
-          "id"
+          {"id":"1","text":"nostrud"},
+          {"id":"2","text":"aliquip"},
+          {"id":"3","text":"ullamco"},
+          {"id":"4","text":"id"}
         ]
       }
     },
@@ -105,10 +105,10 @@
           }
         ],
         "Tags": [
-          "fugiat",
-          "sunt",
-          "cillum",
-          "officia"
+          {"id":"1","text":"fugiat"},
+          {"id":"2","text":"sunt"},
+          {"id":"3","text":"cillum"},
+          {"id":"4","text":"officia"}
         ]
       }
     },
@@ -133,10 +133,10 @@
           }
         ],
         "Tags": [
-          "dolor",
-          "et",
-          "duis",
-          "commodo"
+          {"id":"1","text":"dolor"},
+          {"id":"2","text":"et"},
+          {"id":"3","text":"duis"},
+          {"id":"4","text":"commodo"}
         ]
       }
     },
@@ -161,10 +161,10 @@
           }
         ],
         "Tags": [
-          "voluptate",
-          "pariatur",
-          "dolore",
-          "ex"
+          {"id":"1","text":"voluptate"},
+          {"id":"2","text":"pariatur"},
+          {"id":"3","text":"dolore"},
+          {"id":"4","text":"ex"}
         ]
       }
     },
@@ -189,10 +189,10 @@
           }
         ],
         "Tags": [
-          "aute",
-          "reprehenderit",
-          "irure",
-          "est"
+          {"id":"1","text":"aute"},
+          {"id":"2","text":"reprehenderit"},
+          {"id":"3","text":"irure"},
+          {"id":"4","text":"est"}
         ]
       }
     },
@@ -217,10 +217,10 @@
           }
         ],
         "Tags": [
-          "aliquip",
-          "sint",
-          "cillum",
-          "tempor"
+          {"id":"1","text":"aliquip"},
+          {"id":"2","text":"sint"},
+          {"id":"3","text":"cillum"},
+          {"id":"4","text":"tempor"}
         ]
       }
     },
@@ -245,10 +245,10 @@
           }
         ],
         "Tags": [
-          "officia",
-          "sunt",
-          "in",
-          "do"
+          {"id":"1","text":"officia"},
+          {"id":"2","text":"sunt"},
+          {"id":"3","text":"in"},
+          {"id":"4","text":"do"}
         ]
       }
     },
@@ -273,10 +273,10 @@
           }
         ],
         "Tags": [
-          "minim",
-          "dolor",
-          "esse",
-          "ad"
+          {"id":"1","text":"minim"},
+          {"id":"2","text":"dolor"},
+          {"id":"3","text":"esse"},
+          {"id":"4","text":"ad"}
         ]
       }
     }
