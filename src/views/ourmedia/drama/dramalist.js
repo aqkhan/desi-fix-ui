@@ -239,10 +239,11 @@ class dramaList extends React.Component{
                                         <table className="table">
                                             <thead>
                                             <tr>
-                                                <th>All Dramas <i onClick={this.reverse.bind(this)}
+                                                <th className="widthg1">All Dramas <i onClick={this.reverse.bind(this)}
                                                                   className={this.state.asc === 'asc' ? 'fa fa-chevron-down cursor-pointer':
                                                                   'fa fa-chevron-up cursor-pointer'}></i></th>
                                                 <th>DramaChannel </th>
+                                                <th>Plot </th>
                                                 <th>Enable/disable <i className={this.state.enable === 'asc' ? 'fa fa-chevron-down cursor-pointer':
                                                     'fa fa-chevron-up cursor-pointer'}
                                                 onClick={this.enablesort.bind(this)}></i></th>
@@ -264,6 +265,12 @@ class dramaList extends React.Component{
                                                                 {
                                                                     this.state.editindex === item.dramaName ?
                                                                       <Input type="text" className=" " defaultValue={item.detail.DramaChannel} onChange={(e) => this.editfield(e.target.value)}    id="name" placeholder="Enter drama Channel"  required /> : item.detail.DramaChannel
+                                                                }
+                                                            </td>
+                                                            <td className="widthg">
+                                                                {
+                                                                    this.state.editindex === item.dramaName ?
+                                                                      <Input type="text" className=" " defaultValue={item.detail.Plot} onChange={(e) => this.editfield(e.target.value)}    id="name" placeholder="Enter drama Channel"  required /> : item.detail.Plot
                                                                 }
                                                             </td>
                                                             <td>
